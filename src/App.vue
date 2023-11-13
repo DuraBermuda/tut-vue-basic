@@ -1,6 +1,8 @@
 <template>
   <div>{{ greet }} {{ name }}</div>
   <div v-html="channel"></div>
+  <h2 v-bind:id="headingId">heading</h2>
+  <button v-bind:disabled="isDisabled">Bind</button>
 </template>
 
 <script>
@@ -11,7 +13,9 @@ export default {
     return {
       greet: "Hello",
       name: "Andi",
-      channel: "<b>Tutorial Hell</b>"
+      channel: "<b>Tutorial Hell</b>",
+      headingId:"heading",
+      isDisabled: true,
     }
   }
 }
