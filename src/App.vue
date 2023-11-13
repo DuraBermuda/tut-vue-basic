@@ -9,9 +9,11 @@
     <h2>Tutorial Hell</h2>
     <h2>vue</h2>
   </template>
+
+  <h2 v-show="showElement">Using v-show</h2>
+  <h2 v-if="showElement">Using v-if</h2>
 </template>
   
-
 <script>
 
 export default {
@@ -20,6 +22,7 @@ export default {
     return {
       num: 0,
       display: true,
+      showElement: true,
     }
   }
 }
