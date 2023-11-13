@@ -17,7 +17,19 @@
       promoted: isPromoted,
       new: !isSoldOut,
       'sold-out' : isSoldOut
-    }">Object conditional movie</h2>
+    }">Object conditional movie
+  </h2>
+
+  <h2
+    v-bind:style="{
+      color: highlightColor,
+      'font-size': headerSize + 'px'
+    }">Inline Style
+  </h2>
+
+  <h2 v-bind:style="headerStyleObject">Style Object</h2>
+  <div v-bind:style="[baseStyleObject, successStyleObject]">Success Style</div>
+  <div v-bind:style="[baseStyleObject, dangerStyleObject]">Dangger Style</div>
 </template>
 
 <script>
