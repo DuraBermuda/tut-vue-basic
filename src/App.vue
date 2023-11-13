@@ -34,6 +34,26 @@ export default {
       status: 'danger',
       isPromoted: true,
       isSoldOut: true,
+      highlightColor: 'orange',
+      headerSize: 50,
+      headerStyleObject: {
+        color: 'orange',
+        fontSize: '50px',
+        padding: '20px'
+      },
+      baseStyleObject: {
+        fontSize: '50px',
+      },
+      successStyleObject: {
+        color: 'green',
+        backgroundColor: 'lightgreen',
+        border: '1px solid green',
+      },
+      dangerStyleObject: {
+        color: 'darkred',
+        backgroundColor: 'red',
+        border: '1px solid darkred',
+      }
     }
   }
 }
@@ -47,5 +67,21 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.promoted {
+  font-style: italic;
+}
+
+.new {
+  color: olivedrab;
+}
+
+.sold-out {
+  color: red;
 }
 </style>
