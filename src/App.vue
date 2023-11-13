@@ -1,17 +1,5 @@
 <template>
-  <h2 v-if="num === 0">The number is zero</h2>
-  <h2 v-else-if="num < 0">The number is negative</h2>
-  <h2 v-else-if="num > 0">The number is positive</h2>
-  <h2 v-else>The number is not zero</h2>
-
-  <template v-if="display">
-    <h2>Andi</h2>
-    <h2>Tutorial Hell</h2>
-    <h2>vue</h2>
-  </template>
-
-  <h2 v-show="showElement">Using v-show</h2>
-  <h2 v-if="showElement">Using v-if</h2>
+  <h2 v-for="(index, name) in names" :key="name">{{ index }} {{ name }}</h2>
 </template>
   
 <script>
@@ -20,9 +8,7 @@ export default {
   name: 'App',
   data() {
     return {
-      num: 0,
-      display: true,
-      showElement: true,
+      names: ['Bruce', 'Clark', 'Diana']
     }
   }
 }
