@@ -1,5 +1,5 @@
 <template>
-  <h2 v-for="(index, name) in names" :key="name">{{ index }} {{ name }}</h2>
+  <h2 v-for="name in fullNames" :key="name.first">{{ name.first }} {{ name.last }}</h2>
 </template>
   
 <script>
@@ -8,7 +8,11 @@ export default {
   name: 'App',
   data() {
     return {
-      names: ['Bruce', 'Clark', 'Diana']
+      fullNames: [
+        { first:'Bruce', last:'Wayne'},
+        { first:'Clark', last:'Kent'},
+        { first:'Princess', last:'Diana'},
+        ]
     }
   }
 }
