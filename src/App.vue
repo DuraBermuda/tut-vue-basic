@@ -1,8 +1,7 @@
 <template>
-  <div v-for="actor in actors" :key="actor.name">
-    <h2>{{ actor.name }}</h2>
-    <h3 v-for="movie in actor.movies" :key="movie">{{ movie }}</h3>
-  </div>
+  <template v-for="name in names" :key="name">
+    <h2 v-if="name === 'Bruce'">{{ name }}</h2>
+  </template>
 </template>
   
 <script>
@@ -11,16 +10,7 @@ export default {
   name: 'App',
   data() {
     return {
-      actors: [
-        {
-          name: 'Cristian Bale',
-          movies: ['Batman', 'The Prestige'],
-        },
-        {
-          name: 'Di Caprio',
-          movies: ['Titanic', 'Inception']
-        }
-      ]
+      names: ['Bruce', 'Clark', 'Diana'],
     }
   }
 }
